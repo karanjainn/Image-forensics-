@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Forensics</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    {{msg}}
+    <div class="nav "><h1 style="display:inline-block;" class="logo">Image Forensic</h1>
+    <a href="/templates/signup.html" class="login">Login/Signup</a> </div>
+    <br><br>
+    <div class="toggle-main">
+        <div class="toggle-div-1">
+            <button type="button" id="toggle-btn-1">Image Metadata</button>
+        </div>
+        <div class="toggle-div-2">
+            <button type="button" id="toggle-btn-2">Reverse Searching</button>
+        </div>
+    </div>
+    <br>
+    <center><h2 class="text-bold">Image Metadata extraction</h2></center>
+ 
+    <div class="card">
+        <form style="display:flex;" action="/upload_file" enctype="multipart/form-data" method="POST">
+            <label for="upload-photo" >Select image...</label>
+            <input type="file" name="photo" id="upload-photo" multiple> <!--accept=".png, .jpg, .jpeg, .gif, .bmp"-->
+            <input type="submit" class="btn btn-primary" value="Upload"></submit>
+        </form>
+    <!-- <div class="btn btn-primary">Upload</div> -->
+    </div>
+<br>
+
+<script>
+    console.log("hello");
+    var btn1=document.querySelector('.toggle-div-1');
+    var btn2=document.querySelector('.toggle-div-2');
+    btn1.addEventListener('click',()=>{
+        btn1.style.background = 'rgb(77, 16, 174)';
+        btn2.style.background = 'hsl(252, 75%, 60%)'
+    })
+    btn2.addEventListener('click',()=>{
+        btn2.style.background = 'rgb(77, 16, 174)';
+        btn1.style.background = 'hsl(252, 75%, 60%)'
+    })
+
+    // btn1.classList.toggle('button-clicked')
+    // btn2.classList.toggle('button-clicked')
+    // }
+</script>
+</body>
+</html>

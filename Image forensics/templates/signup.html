@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-signup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="s-forms Box">
+        <div class="s-form login">
+            <div class="form-content">
+                <header class="s-text-bold">Login/Signup</header>
+                <form action="#">
+                    <div class="s-field s-input-field">
+                        <input type="email" placeholder="Email" class="email">
+                    </div>
+                    <div class="s-field s-input-field">
+                        <input type="password" placeholder="password" class="password">
+                    </div>
+                    <div class="s-form-link">
+                        <a href="#" >forgot password?</a>
+                    </div>
+                    <div class="s-field button">
+                        <button class="btn s-btn-primary">Login</button>
+                    </div>
+                    <div class="signup">
+                        <span class="">Don't have an account?</span><div class="signup-pop"> Signup</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="form-signup">
+        <div class="s-form Signup">
+                <div class="s-form-content">
+                    <header class="s-text-bold">Signup</header>
+                    <form action="#">
+                        <div class="s-field s-input-field">
+                            <input type="nane" placeholder="Name" class="name">
+                        </div>
+                        <div class="s-field s-input-field">
+                            <input type="email" placeholder="Email" class="email">
+                        </div>
+                        <div class="s-field s-input-field">
+                            <input type="tel" placeholder="Phone Number" class="phone">
+                        </div>
+                        <div class="s-field s-input-field">
+                            <input type="password" placeholder="Password" class="password">
+                        </div>
+                        <div class="s-field s-input-field">
+                            <input type="password" placeholder="Confirm Password" class="c-password">
+                        </div>
+                        <div class="s-field s-input-field">
+                            <input type="text" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')"  class="email">
+                        </div>
+                        
+                        <div class="s-field button">
+                            <button class="btn s-btn-primary">Signup</button>
+                        </div>
+                    
+                    </form>
+                </div>
+            </div>    
+        </div>
+<script>
+        const signupPop = document.querySelector('.signup-pop');
+        const signupPage = document.querySelector('.form-signup');
+
+        const openSignup = () =>{
+            signupPage.style.display ='grid';
+        }
+        const closeSignup = (f) =>{
+            if(f.target.classList.contains('form-signup')){
+            signupPage.style.display='none';
+            }
+        }
+    signupPop.addEventListener('click', openSignup);
+    signupPage.addEventListener('click', closeSignup);
+</script>
+        
+</body>
+</html>
